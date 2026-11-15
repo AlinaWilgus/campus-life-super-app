@@ -1,0 +1,39 @@
+/* Global body styling */
+body {
+  background-color: #f8f9fa;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* Adrian College black & gold navigation bar */
+.navbar {
+  background-color: #111111;
+  padding: 0.85rem 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+/* Nav link styling */
+.navbar a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+  transition: 0.2s ease;
+}
+
+/* Gold highlight on hover */
+.navbar a:hover {
+  color: #ffc72c;
+  border-bottom-color: #ffc72c;
+}
+
+/* Card hover lift effect */
+.card {
+  transition: transform 0.15s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+}
