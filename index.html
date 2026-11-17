@@ -19,7 +19,7 @@
     </header>
 
     <main>
-        <div class="contrainer my-4">
+        <div class="container my-4">
             <!--Page Title & Search Bar-->
             <section class="mb-4">
                 <h1 class="h3 mb-3">Campus Map & Hours</h1>
@@ -41,33 +41,176 @@
             </section>
             <!--Building Cards List-->
             <section class="row g-3">
-                <!--Metillat Center Card-->
-                <div class="col-md-6 campus-card" data-category="athletics">
+                <!--Merillat Center Card-->
+                <div class="col-md-6 campus-card" data-category="athletics" data-open="8" data-close="24">
                     <div class="card h-100 shadow-sm">
                         <div class="card-body">
                             <div class="d-flex justify-content-between align-items-start">
                                 <img src="images/..." class="card-img-top" alt="...">
                                 <h2 class="h5 card-title">Merillat Sport & Fitness Center</h2>
-                                <span class="badge bg-success">Open Now</span>
+                                <span class="badge status-badge">Checking...</span>
                             </div>
-                            <p class="card-text text-muted sma;; mb-3">Open until 10:00 PM - Weight Room, Track & Courts</p>
+                            <p class="card-text text-muted small mb-3">Open until 10:00 PM - Weight Room, Track & Courts</p>
                             <div class="d-flex gap-2">
                                 <button class="btn btn-primary btn-sm">Directions</button>
                                 <button class="btn btn-outline-secondary btn-sm">View Hours</button>
                             </div>
+                            <p class="card-text small text-muted mt-2 hours-text" style="display: none;">
+                                <strong>Hours:</strong> Mon - Thu: 8:00 AM - Midnight (Fri until 5:00 PM)
+                            </p>
                         </div>
                     </div>
                 </div>
                 <!--Shipmen Library Card-->
-                <div class="col-md-6 campus-card" data-category="academic">
+                <div class="col-md-6 campus-card" data-category="academic" data-open="8" data-close="24">
                     <div class="card h-100 shadow-sm">
                         <div class="card-body">
                             <div class="d-flex justify-content-between align-items-start">
                                 <img src="images/..." class="card-img-top" alt="...">
                                 <h2 class="h5 card-title">Shipmen Library</h2>
-                                <span class="badge bg-success">Open Now</span>
+                                <span class="badge status-badge">Checking...</span>
                             </div>
-                            <p class="card-text text-muted sma;; mb-3">Open until 11:00 PM - Study Rooms & Printing</p>
+                            <p class="card-text text-muted small mb-3">Open until Midnight - Study Rooms & Printing</p>
+                            <div class="d-flex gap-2">
+                                <button class="btn btn-primary btn-sm">Directions</button>
+                                <button class="btn btn-outline-secondary btn-sm">View Hours</button>
+                            </div>
+                            <p class="card-text small text-muted mt-2 hours-text" style="display: none;">
+                                <strong>Hours:</strong> Mon - Thu: 8:00 AM - Midnight | Fri: 8:00 AM - 5:00 PM | Sun: 12:00 PM - Midnight
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!--Ritchie Marketplace Card (Link to Dining Page)-->
+                <div class="col-md-6 campus-card" data-category="dining" data-open="7" data-close="21">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <img src="images/..." class="card-img-top" alt="...">
+                                <h2 class="h5 card-title">Ritchie Marketplace</h2>
+                                <span class="badge status-badge">Checking...</span>
+                            </div>
+                            <p class="card-text text-muted small mb-3">Main Campus Dining Hall - Breakfast, Lunch & Dinner</p>
+                            <div class="d-flex gap-2">
+                                <button class="btn btn-primary btn-sm">Directions</button>
+                                <a href="dining.html" class="btn btn-outline-secondary btn-sm">View Menu</a>
+                            </div>
+                            <p class="card-text small text-muted mt-2 hours-text" style="display: none;">
+                                <strong>Hours:</strong> Mon - Fri: 7:30 AM - 7:00 PM | Sat - Sun: Brunch & Dinner Hours Active
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!--Caine Student Center-->
+                <div class="col-md-6 campus-card" data-category="dining" data-open="7" data-close="23">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <img src="images/..." class="card-img-top" alt="...">
+                                <h2 class="h5 card-title">Caine Student Center</h2>
+                                <span class="badge status-badge">Checking...</span>
+                            </div>
+                            <p class="card-text text-muted small mb-3">Main Campus Dining Hall - Lunch & Dinner</p>
+                            <div class="d-flex gap-2">
+                                <button class="btn btn-primary btn-sm">Directions</button>
+                                <a href="dining.html" class="btn btn-outline-secondary btn-sm">View Menu</a>
+                            </div>
+                            <p class="card-text small text-muted mt-2 hours-text" style="display: none;">
+                                <strong>Hours:</strong> Mon - Fri: 11:00 AM - 11:00 PM | Paws 'N Go Market: Open 24/7
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!--Jones/Peelle-->
+                <div class="col-md-6 campus-card" data-category="academic" data-open="7" data-close="21">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <img src="images/..." class="card-img-top" alt="...">
+                                <h2 class="h5 card-title">Jones/Peelle Hall</h2>
+                                <span class="badge status-badge">Checking...</span>
+                            </div>
+                            <p class="card-text text-muted small mb-3">Classrooms and Study Seating</p>
+                            <div class="d-flex gap-2">
+                                <button class="btn btn-primary btn-sm">Directions</button>
+                                <button class="btn btn-outline-secondary btn-sm">View Hours</button>
+                            </div>
+                            <p class="card-text small text-muted mt-2 hours-text" style="display: none;">
+                                <strong>Hours:</strong> Mon - Fri: 7:00 AM - 9:00 PM | Sat: 8:00 AM - 4:00 PM
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!--Mahan-->
+                <div class="col-md-6 campus-card" data-category="academic" data-open="7" data-close="22">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <img src="images/..." class="card-img-top" alt="...">
+                                <h2 class="h5 card-title">Mahan Hall</h2>
+                                <span class="badge status-badge">Checking...</span>
+                            </div>
+                            <p class="card-text text-muted small mb-3">Classrooms and Study Seating</p>
+                            <div class="d-flex gap-2">
+                                <button class="btn btn-primary btn-sm">Directions</button>
+                                <button class="btn btn-outline-secondary btn-sm">View Hours</button>
+                            </div>
+                            <p class="card-text small text-muted mt-2 hours-text" style="display: none;">
+                                <strong>Hours:</strong> Mon - Fri: 7:00 AM - 10:00 PM (ID Swipe Required After 7 PM)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!--Rush-->
+                <div class="col-md-6 campus-card" data-category="academic" data-open="8" data-close="22">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <img src="images/..." class="card-img-top" alt="...">
+                                <h2 class="h5 card-title">Jones/Peelle Hall</h2>
+                                <span class="badge status-badge">Checking...</span>
+                            </div>
+                            <p class="card-text text-muted small mb-3">Classrooms and Study Seating</p>
+                            <div class="d-flex gap-2">
+                                <button class="btn btn-primary btn-sm">Directions</button>
+                                <button class="btn btn-outline-secondary btn-sm">View Hours</button>
+                            </div>
+                            <p class="card-text small text-muted mt-2 hours-text" style="display: none;">
+                                <strong>Hours:</strong> Open 24/7 for Residents (Visitor Hours: 8:00 AM - 10:00 PM)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!--Valade-->
+                <div class="col-md-6 campus-card" data-category="academic" data-open="7" data-close="20">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <img src="images/..." class="card-img-top" alt="...">
+                                <h2 class="h5 card-title">Valade Hall (Academic • Business)</h2>
+                                <span class="badge status-badge">Checking...</span>
+                            </div>
+                            <p class="card-text text-muted small mb-3">Classrooms and Study Seating</p>
+                            <div class="d-flex gap-2">
+                                <button class="btn btn-primary btn-sm">Directions</button>
+                                <button class="btn btn-outline-secondary btn-sm">View Hours</button>
+                            </div>
+                            <p class="card-text small text-muted mt-2 hours-text" style="display: none;">
+                                <strong>Hours:</strong> Mon - Fri: 7:00 AM - 8:00 PM | Sat - Sun: Closed
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!--Stanton Administration Building-->
+                <div class="col-md-6 campus-card" data-category="academic" data-open="8" data-close="17">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <img src="images/..." class="card-img-top" alt="...">
+                                <h2 class="h5 card-title">Stanton Administration Building</h2>
+                                <span class="badge status-badge">Checking...</span>
+                            </div>
+                            <p class="card-text text-muted small mb-3">Monday - Friday - Classrooms and Study Seating</p>
                             <div class="d-flex gap-2">
                                 <button class="btn btn-primary btn-sm">Directions</button>
                                 <button class="btn btn-outline-secondary btn-sm">View Hours</button>
@@ -75,19 +218,36 @@
                         </div>
                     </div>
                 </div>
-                <!--Ritchie Marketplace Card (Link to Dining Page)-->
-                <div class="col-md-6 campus-card" data-category="dining">
+                <!--Goldsmith Center-->
+                <div class="col-md-6 campus-card" data-category="academic" data-open="7" data-close="22">
                     <div class="card h-100 shadow-sm">
                         <div class="card-body">
                             <div class="d-flex justify-content-between align-items-start">
                                 <img src="images/..." class="card-img-top" alt="...">
-                                <h2 class="h5 card-title">Ritchie Marketplace</h2>
-                                <span class="badge bg-success">Open Now</span>
+                                <h2 class="h5 card-title">Jones/Peelle Hall</h2>
+                                <span class="badge status-badge">Checking...</span>
                             </div>
-                            <p class="card-text text-muted sma;; mb-3">Main Campus Dining Hall - Breakfast, Lunch & Dinner</p>
+                            <p class="card-text text-muted small mb-3">Classrooms and Study Seating</p>
                             <div class="d-flex gap-2">
                                 <button class="btn btn-primary btn-sm">Directions</button>
-                                <a href="dining.html" class="btn btn-outline-secondary btn-sm">View Menu</a>
+                                <button class="btn btn-outline-secondary btn-sm">View Hours</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Downs Hall-->
+                <div class="col-md-6 campus-card" data-category="academic" data-open="8" data-close="22">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <img src="images/..." class="card-img-top" alt="...">
+                                <h2 class="h5 card-title">Jones/Peelle Hall</h2>
+                                <span class="badge status-badge">Checking...</span>
+                            </div>
+                            <p class="card-text text-muted small mb-3">Classrooms and Study Seating</p>
+                            <div class="d-flex gap-2">
+                                <button class="btn btn-primary btn-sm">Directions</button>
+                                <button class="btn btn-outline-secondary btn-sm">View Hours</button>
                             </div>
                         </div>
                     </div>

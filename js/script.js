@@ -65,8 +65,8 @@ if (ritchieBtn && caineBtn) {
     if (diningTitle) diningTitle.textContent = 'Caine Student Center Hours';
     if (diningHours) {
       diningHours.innerHTML = `
-        <li><strong>Mon – Fri:</strong> 11:00 AM – 11:00 PM (Bulldog Bistro, Beanz & Grill)</li>
-        <li><strong>Sat – Sun:</strong> 3:00 PM – 10:00 PM</li>
+        <li><strong>Mon - Fri:</strong> 11:00 AM - 11:00 PM (Bulldog Bistro, Beanz & Grill)</li>
+        <li><strong>Sat - Sun:</strong> 3:00 PM - 10:00 PM</li>
         <li><strong>Paws 'N Go Market:</strong> Open 24/7</li>
       `;
     }
@@ -85,9 +85,9 @@ if (ritchieBtn && caineBtn) {
     if (diningTitle) diningTitle.textContent = 'Ritchie Marketplace Hours';
     if (diningHours) {
       diningHours.innerHTML = `
-        <li><strong>Breakfast:</strong> 7:30 AM – 9:00 AM</li>
-        <li><strong>Lunch:</strong> 11:00 AM – 2:00 PM</li>
-        <li><strong>Dinner:</strong> 5:00 PM – 7:00 PM</li>
+        <li><strong>Breakfast:</strong> 7:30 AM - 9:00 AM</li>
+        <li><strong>Lunch:</strong> 11:00 AM - 2:00 PM</li>
+        <li><strong>Dinner:</strong> 5:00 PM - 7:00 PM</li>
       `;
     }
 
@@ -107,3 +107,21 @@ async function loadCampusData() {
     }
 }
 loadCampusData();
+// 6. Live Building Hours Status Checker (Map Page)
+const currentHour = new Date().getHours();
+
+cards.forEach(card => {
+  const openHour = parseInt(card.getAttribute('data-open'));
+  const closeHour = parseInt(card.getAttribute('data-close'));
+  const statusBadge = card.querySelector('.status-badge');
+
+  if (statusBadge && !isNaN(openHour) && !isNaN(closeHour)) {
+    if (currentHour >= openHour && currentHour < closeHour) {
+      statusBadge.textContent = '● Open Now';
+      statusBadge.className = 'badge bg-success status-badge';
+    } else {
+      statusBadge.textContent = '● Closed';
+      statusBadge.className = 'badge bg-danger status-badge';
+    }
+  }
+});
