@@ -54,7 +54,7 @@ const ritchieBtn = document.getElementById('ritchieBtn');
 const caineBtn = document.getElementById('caineBtn');
 const diningTitle = document.getElementById('diningTitle');
 const diningHours = document.getElementById('diningHours');
-
+const diningDirectionsBtn = document.getElementById('diningDirectionsBtn');
 if (ritchieBtn && caineBtn) {
   caineBtn.addEventListener('click', () => {
     caineBtn.classList.replace('btn-outline-dark', 'btn-dark');
@@ -70,7 +70,9 @@ if (ritchieBtn && caineBtn) {
         <li><strong>Paws 'N Go Market:</strong> Open 24/7</li>
       `;
     }
-
+    if (diningDirectionsBtn) {
+        diningDirectionsBtn.textContent = 'Caine Student Center on Map';
+    }
     cards.forEach(card => {
       card.style.display = card.getAttribute('data-hall') === 'caine' ? '' : 'none';
     });
@@ -89,6 +91,9 @@ if (ritchieBtn && caineBtn) {
         <li><strong>Lunch:</strong> 11:00 AM - 2:00 PM</li>
         <li><strong>Dinner:</strong> 5:00 PM - 7:00 PM</li>
       `;
+    if (diningDirectionsBtn) {
+        diningDirectionsBtn.textContent = 'Ritchie Marketplace on Map';
+    }
     }
 
     cards.forEach(card => {
@@ -124,4 +129,19 @@ cards.forEach(card => {
       statusBadge.className = 'badge bg-danger status-badge';
     }
   }
+});
+// 7. Toggle Building Hours Details on Map Page
+const hoursBtns = document.querySelectorAll('.hours-btn');
+
+hoursBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const cardBody = btn.closest('.card-body');
+    const hoursText = cardBody ? cardBody.querySelector('.hours-text') : null;
+
+    if (hoursText) {
+      const isHidden = hoursText.style.display === 'none';
+      hoursText.style.display = isHidden ? 'block' : 'none';
+      btn.textContent = isHidden ? 'Hide Hours' : 'View Hours';
+    }
+  });
 });
